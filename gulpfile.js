@@ -1,12 +1,12 @@
 
 const { src, dest, series , watch,parallel} = require('gulp');
 
-const globs={
-    html:"project/**/*.html",
-    css:"project/css/**/*.css",
-    js:"project/js/**/*.js",
-    img:"project/pics/*"
-}
+const globs = {
+  html: "project/**/*.html",
+  css: "project/css/**/*.css",
+  js: "project/js/**/*.js",
+  json: "project/*.json", // Add JSON file path
+};
 
 
 const htmlmin = require("gulp-html-minifier-terser");
@@ -15,7 +15,8 @@ function htmlTask() {
     //read file
    return src(globs.html)
    //minfiy
-   .pipe(htmlmin({collapseWhitespace:true,removeComments:true}))
+//    .pipe(htmlmin({collapseWhitespace:true,removeComments:true}))
+   .pipe(htmlmin({removeComments:true}))
     // move to dist
     .pipe(dest("dist"))
 }
@@ -49,40 +50,19 @@ function jsTask() {
     .pipe(dest("dist/assets/js" ,{sourcemaps:"."}))
 }
 
+exports.js = jsTask
 
-exports.js =jsTask
-const optimizeImages =require("gulp-optimize-images");
-function imgTask() {
-    
-    return src(globs.img)
-    .pipe(optimizeImages({compressOptions:{
-        jpeg: {
-            quality: 50,
-            progressive: true,
-        },
-        png: {
-            quality: 90,
-            progressive: true,
-            compressionLevel: 6,
-        },
-        webp: {
-            quality: 80,
-        },
-    }}))
-    .pipe(dest('dist/assets/images'))
-}
-exports.img = imgTask
-
-// generate image sprite
-var spritesmith = require('gulp.spritesmith');
-function imgSprite() {
-    // this will generate a sprite folder in project with all-in-one.png and styleForSprite.css
-    return  src(globs.img)
-    .pipe(spritesmith({cssName:"styleForSprite.css",imgName:"all-in-one.png"}))
-    .pipe(dest("project/sprite"))
+// New task to minify JSON data
+const jsonminify = require("gulp-json-minify");
+function minifyJson() {
+    return src(globs.json)
+        .pipe(jsonminify())
+        .pipe(dest('dist'));
 }
 
-exports.sprite= imgSprite
+exports.minifyJson = minifyJson;
+
+
 
 function watchTask(){
     watch(globs.html,htmlTask)
@@ -98,16 +78,9 @@ function dummyTask(done){
 }
 
 //default //gulp
-exports.default= series( parallel(  htmlTask, cssTask ,jsTask, imgTask ),dummyTask,watchTask )
+exports.default = series(
+  parallel(htmlTask, cssTask, jsTask, minifyJson),
+  dummyTask,
+  watchTask
+);
 
-/* 
-function task1() {
-    // code
-    return Promise.resolve()
-}
-
-//named export
-exports.t1 =task1 //gulp t1
-
-//defualt export
-exports.default=  task1 //gulp */

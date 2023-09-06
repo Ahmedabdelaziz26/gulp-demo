@@ -1,12 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.min.css">
-  <!--  -->
   <title>Gulp Demo</title>
 </head>
 
@@ -21,7 +19,6 @@
     </section>
   </header>
 
-  <!-- this a coment -->
   <main>
     <section class="hero01">
 
@@ -58,9 +55,227 @@
 
 
 
-  <!-- js -->
   <script src="./assets/js/script.min.js"></script>
-  <!--  -->
 </body>
 
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+  </head>
+  <body onclick="type(event)">
+    <!-- <div style="display: flex" class="header">
+      <input type="text" name="name" id="name" />
+      <input type="password" name="password" id="password" />
+      <button id="login">log in</button>
+      <script src="login.js" type="module"></script>
+    </div> -->
+
+    <div class="table" id="table">
+      <div class="row1">
+        <div class="element Other-Nonmetals">H</div>
+        <input
+          id="searchInput"
+          class="search"
+          type="text"
+          placeholder="Search"
+        />
+
+        <div class="type" id="Alkali-Metals">Alkali Metals</div>
+        <div class="type" id="Alkaline-Earth-Metals">Alkaline Earth Metals</div>
+        <div class="type" id="Lanthanoids">Lanthanoids</div>
+        <div class="type" id="Aktinoids">Aktinoids</div>
+        <div class="type" id="transition-metals">Transition Metals</div>
+        <div class="type" id="Post-Transition-Metals">
+          Post-Transition Metals
+        </div>
+        <div class="type" id="Metalloids">Metalloids</div>
+        <div class="type" id="Other-Nonmetals">Other Nonmetals</div>
+        <div class="type" id="Noble-Gasses">Noble Gasses</div>
+        <div class="type" id="Unknown">Unknown</div>
+
+        <div class="element Noble-Gasses">He</div>
+      </div>
+      <div class="row2">
+        <div class="column">
+          <div class="element Alkali-Metals">Li</div>
+          <div class="element Alkali-Metals">Na</div>
+          <div class="element Alkali-Metals">K</div>
+          <div class="element Alkali-Metals">Rb</div>
+          <div class="element Alkali-Metals">Cs</div>
+          <div class="element Alkali-Metals">Fr</div>
+        </div>
+        <div class="column">
+          <div class="element Alkaline-Earth-Metals">Be</div>
+          <div class="element Alkaline-Earth-Metals">Mg</div>
+          <div class="element Alkaline-Earth-Metals">Ca</div>
+          <div class="element Alkaline-Earth-Metals">Sr</div>
+          <div class="element Alkaline-Earth-Metals">Ba</div>
+          <div class="element Alkaline-Earth-Metals">Ra</div>
+        </div>
+        <div class="column">
+          <div class="element transition-metals">Sc</div>
+          <div class="element transition-metals">Y</div>
+          <div class="element Lanthanoids">57-71</div>
+          <div class="element Aktinoids">89-103</div>
+        </div>
+        <div class="column">
+          <div class="element transition-metals">Ti</div>
+          <div class="element transition-metals">Zr</div>
+          <div class="element transition-metals">Hf</div>
+          <div class="element transition-metals">Rf</div>
+        </div>
+        <div class="column">
+          <div class="element transition-metals">V</div>
+          <div class="element transition-metals">Nb</div>
+          <div class="element transition-metals">Ta</div>
+          <div class="element transition-metals">Db</div>
+        </div>
+        <div class="column">
+          <div class="element transition-metals">Cr</div>
+          <div class="element transition-metals">Mo</div>
+          <div class="element transition-metals">W</div>
+          <div class="element transition-metals">Sg</div>
+        </div>
+        <div class="column">
+          <div class="element transition-metals">Mn</div>
+          <div class="element transition-metals">Tc</div>
+          <div class="element transition-metals">Re</div>
+          <div class="element transition-metals">Bh</div>
+        </div>
+        <div class="column">
+          <div class="element transition-metals">Fe</div>
+          <div class="element transition-metals">Ru</div>
+          <div class="element transition-metals">Os</div>
+          <div class="element transition-metals">Hs</div>
+        </div>
+        <div class="column">
+          <div class="element transition-metals">Co</div>
+          <div class="element transition-metals">Rh</div>
+          <div class="element transition-metals">Ir</div>
+          <div class="element Unknown">Mt</div>
+        </div>
+        <div class="column">
+          <div class="element transition-metals">Ni</div>
+          <div class="element transition-metals">Pd</div>
+          <div class="element transition-metals">Pt</div>
+          <div class="element Unknown">Ds</div>
+        </div>
+        <div class="column">
+          <div class="element transition-metals">Cu</div>
+          <div class="element transition-metals">Ag</div>
+          <div class="element transition-metals">Au</div>
+          <div class="element Unknown">Rg</div>
+        </div>
+        <div class="column">
+          <div class="element transition-metals">Zn</div>
+          <div class="element transition-metals">Cd</div>
+          <div class="element transition-metals">Hg</div>
+          <div class="element transition-metals">Cn</div>
+        </div>
+        <div class="column">
+          <div class="element Metalloids">B</div>
+          <div class="element Post-Transition-Metals">Al</div>
+          <div class="element Post-Transition-Metals">Ga</div>
+          <div class="element Post-Transition-Metals">In</div>
+          <div class="element Post-Transition-Metals">Tl</div>
+          <div class="element Unknown">Nh</div>
+        </div>
+        <div class="column">
+          <div class="element element Other-Nonmetals">C</div>
+          <div class="element Metalloids">Si</div>
+          <div class="element Metalloids">Ge</div>
+          <div class="element Post-Transition-Metals">Sn</div>
+          <div class="element Post-Transition-Metals">Pb</div>
+          <div class="element Post-Transition-Metals">Fl</div>
+        </div>
+        <div class="column">
+          <div class="element element Other-Nonmetals">N</div>
+          <div class="element element Other-Nonmetals">P</div>
+          <div class="element Metalloids">As</div>
+          <div class="element Metalloids">Sb</div>
+          <div class="element Post-Transition-Metals">Bi</div>
+          <div class="element Unknown">Mc</div>
+        </div>
+        <div class="column">
+          <div class="element element Other-Nonmetals">O</div>
+          <div class="element element Other-Nonmetals">S</div>
+          <div class="element element Other-Nonmetals">Se</div>
+          <div class="element Metalloids">Te</div>
+          <div class="element Post-Transition-Metals">Po</div>
+          <div class="element Unknown">Lv</div>
+        </div>
+        <div class="column">
+          <div class="element element Other-Nonmetals">F</div>
+          <div class="element element Other-Nonmetals">Cl</div>
+          <div class="element element Other-Nonmetals">Br</div>
+          <div class="element element Other-Nonmetals">I</div>
+          <div class="element Metalloids">At</div>
+          <div class="element Unknown">Ts</div>
+        </div>
+        <div class="column">
+          <div class="element Noble-Gasses">Ne</div>
+          <div class="element Noble-Gasses">Ar</div>
+          <div class="element Noble-Gasses">Kr</div>
+          <div class="element Noble-Gasses">Xe</div>
+          <div class="element Noble-Gasses">Rn</div>
+          <div class="element Unknown">Og</div>
+        </div>
+      </div>
+      <div class="row3">
+        <div class="r3r1">
+          <div class="hide element">.</div>
+          <div class="hide element">.</div>
+          <div class="hide element">.</div>
+          <div class="element Lanthanoids">La</div>
+          <div class="element Lanthanoids">Ce</div>
+          <div class="element Lanthanoids">Pr</div>
+          <div class="element Lanthanoids">Nd</div>
+          <div class="element Lanthanoids">Pm</div>
+          <div class="element Lanthanoids">Sm</div>
+          <div class="element Lanthanoids">Eu</div>
+          <div class="element Lanthanoids">Gd</div>
+          <div class="element Lanthanoids">Tb</div>
+          <div class="element Lanthanoids">Dy</div>
+          <div class="element Lanthanoids">Ho</div>
+          <div class="element Lanthanoids">Er</div>
+          <div class="element Lanthanoids">Tm</div>
+          <div class="element Lanthanoids">Yb</div>
+          <div class="element Lanthanoids">Lu</div>
+        </div>
+        <div class="r3r2">
+          <div class="hide element">.</div>
+          <div class="hide element">.</div>
+          <div class="hide element">.</div>
+          <div class="element Aktinoids">Ac</div>
+          <div class="element Aktinoids">Th</div>
+          <div class="element Aktinoids">Pa</div>
+          <div class="element Aktinoids">U</div>
+          <div class="element Aktinoids">Np</div>
+          <div class="element Aktinoids">Pu</div>
+          <div class="element Aktinoids">Am</div>
+          <div class="element Aktinoids">Cm</div>
+          <div class="element Aktinoids">Bk</div>
+          <div class="element Aktinoids">Cf</div>
+          <div class="element Aktinoids">Es</div>
+          <div class="element Aktinoids">Fm</div>
+          <div class="element Aktinoids">Md</div>
+          <div class="element Aktinoids">No</div>
+          <div class="element Aktinoids">Lr</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./../dist/assets/js/script.min.js"></script>
+  </body>
 </html>

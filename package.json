@@ -8,6 +8,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-html-minifier-terser": "^7.1.0",
+    "gulp-json-minify": "^1.2.3",
     "gulp-optimize-images": "^1.1.5",
     "gulp-terser": "^2.1.0",
     "gulp.spritesmith": "^6.13.0"

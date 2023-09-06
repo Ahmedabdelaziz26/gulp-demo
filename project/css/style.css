@@ -1,19 +1,227 @@
-
-/* ---------  GLOBAL STYLES  --------- */
-
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-
-
 body {
-  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.623);
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* height: 100% ; */
+  /* width: 100vw   ; */
+}
+.search {
+  padding: 15px;
+  margin: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #232323;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'><path fill='%23838D99' d='M13.98 12.57a2 2 0 0 1 1.93.52l2.5 2.5a2 2 0 0 1-2.82 2.82l-2.5-2.5a2 2 0 0 1-.52-1.93l-1.38-1.37a7 7 0 1 1 1.42-1.42l1.37 1.38zm-3.37-2.03a5 5 0 1 0-7.08-7.08 5 5 0 0 0 7.08 7.08z'></path></svg>");
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-size: 20px 20px;
+  border: 1px solid;
+  color: beige;
+  box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 150px;
+  padding: 0.5em 1em 0.5em 2.5em;
+  flex-direction: column;
+}
+.table {
+  width: 100vw;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.418);
+  padding: 15px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.row1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+}
+.row3 {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.r3r1,
+.r3r2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-body > img{
-  width: 70%;
-  margin:-500px 150px;
+.element {
+  padding: 0.12vw;
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  width: 4vw;
+  height: 4vw;
+  margin-top: 0.2vw;
+  margin-bottom: 0.2vw;
+  font-size: 1vw;
+  text-align: center;
+  justify-content: space-around;
+  background-color: rgb(56, 56, 56);
+  transition: 0.3s;
+}
+.element .numbere {
+  text-align: start;
+}
+.element .symbole {
+  padding: 0;
+  margin: 0;
+  font-weight: bolder;
+}
+.element .namee {
+  font-size: 0.79vw;
+}
+.element .masse {
+  font-size: 0.6vw;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.type {
+  font-size: 0.8vw;
+}
+.hide {
+  visibility: hidden;
+}
+.elementhover {
+  scale: 1.7;
+}
+.elementhovermax {
+  /* width: 5vw ;   */
+  /* position: relative ;  */
+  /* height: 5vw ;     */
+  scale: 3;
+}
+.shadow {
+  box-shadow: 0 0 17px 0px currentColor;
+}
+.opacity {
+  opacity: 0.2;
+}
+
+/* ========================================================= */
+.Alkali-Metals,
+#Alkali-Metals {
+  border-color: rgb(236, 190, 76);
+  color: rgb(236, 190, 76);
+}
+.Alkaline-Earth-Metals,
+#Alkaline-Earth-Metals {
+  border-color: rgb(222, 233, 85);
+  color: rgb(222, 233, 85);
+}
+.Lanthanoids,
+#Lanthanoids {
+  border-color: rgb(236, 119, 163);
+  color: rgb(236, 119, 163);
+}
+.Aktinoids,
+#Aktinoids {
+  border-color: rgb(198, 134, 204);
+  color: rgb(198, 134, 204);
+}
+.transition-metals,
+#transition-metals {
+  border-color: rgb(253, 133, 114);
+  color: rgb(253, 133, 114);
+}
+.Post-Transition-Metals,
+#Post-Transition-Metals {
+  border-color: rgb(76, 221, 243);
+  color: rgb(76, 221, 243);
+}
+.Metalloids,
+#Metalloids {
+  border-color: rgb(58, 239, 182);
+  color: rgb(58, 239, 182);
+}
+.Other-Nonmetals,
+#Other-Nonmetals {
+  border-color: rgb(82, 238, 91);
+  color: rgb(82, 238, 91);
+}
+.Noble-Gasses,
+#Noble-Gasses {
+  border-color: rgb(117, 159, 255);
+  color: rgb(117, 159, 255);
+}
+.Unknown,
+#Unknown {
+  border-color: rgb(204, 204, 204);
+  color: rgb(204, 204, 204);
+}
+
+/* /////////////////////////////////////////////////// */
+
+.information {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 550px;
+}
+
+.symbol {
+  font-size: 60px;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #000000;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.info {
+  width: 450px;
+
+  flex-grow: 1;
+}
+
+.name {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+li {
+  width: 210px;
+
+  margin-bottom: 5px;
+}
+
+li strong {
+  margin-right: 5px;
 }
